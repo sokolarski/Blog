@@ -1,16 +1,29 @@
 ﻿namespace Blog.Web.Controllers
 {
     using System.Diagnostics;
-
+    using Blog.Data.Models;
+    using Blog.Services.Data;
     using Blog.Web.ViewModels;
-
+    using Blog.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController
     {
+        private readonly ICategoriesService catService;
+
+        public HomeController(ICategoriesService catService)
+        {
+            this.catService = catService;
+        }
+
         public IActionResult Index()
         {
-            return this.View();
+            var viewModel = new IndexViewModel()
+            {
+                Categories = this.catService.GetAll<IndexCategoryViewModel>(),
+            };
+
+            return this.View(viewModel);
         }
 
         public IActionResult Privacy()

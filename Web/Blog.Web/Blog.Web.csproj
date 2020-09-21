@@ -35,4 +35,6 @@
     <ProjectReference Include="..\Blog.Web.Infrastructure\Blog.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\Blog.Web.ViewModels\Blog.Web.ViewModels.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>

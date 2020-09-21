@@ -1,13 +1,12 @@
-﻿using Blog.Data.Common.Repositories;
-using Blog.Data.Models;
-using Blog.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Blog.Services.Data
+﻿namespace Blog.Services.Data
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using Blog.Data.Common.Repositories;
+    using Blog.Data.Models;
+    using Blog.Services.Mapping;
+
     public class CategoriesService : ICategoriesService
     {
         private readonly IDeletableEntityRepository<Category> catRepo;

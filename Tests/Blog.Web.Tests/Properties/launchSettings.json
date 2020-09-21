@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "AspNetCoreTemplate.Web.Tests": {
+    "Blog.Web.Tests": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

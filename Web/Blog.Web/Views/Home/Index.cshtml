@@ -1,9 +1,19 @@
-﻿@using Blog.Common
-@{
-    this.ViewData["Title"] = "Home Page";
-}
+﻿@model Blog.Web.ViewModels.Home.IndexViewModel
+@using Blog.Common
+@{ this.ViewData["Title"] = "Home Page"; }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="row">
+    @foreach (var category in Model.Categories)
+    {
+<div class="media col-md-4">
+    <img class="mr-3" src=@category.ImageUrl alt=@category.Title width="100">
+    <div class="media-body">
+        <h5 class="mt-0"><a href=@category.Url>@category.Title</a></h5>
+        <p>Posts: @category.PostsCount</p>
+    </div>
+</div>}
 </div>
